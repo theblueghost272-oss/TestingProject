@@ -1,0 +1,43 @@
+Business Logic & Design
+- Are logic and data flow clear?
+- Are there both client- and server-side controls?
+- Does code conform to business requirements?
+- Are domain-specific risks addressed?
+
+Authorisation
+- Is access to pages and data denied by default?
+- Is authorisation checked for each request?
+- Is the Principle of Least Privilege followed?
+
+Authentication
+- Does login failure leak information?
+- Are password length and complexity requirements appropriate?
+- Are there preventative measures against repeated incorrect login attempts?
+
+Session Management
+- Do session cookies have a reasonable expiry time?
+- Is session data validated?
+- Is session storage secure?
+- Are session IDs generated securely on the server?
+- Does logging out invalidate the session?
+
+Data Management
+- Are hashing and salting used for storing passwords?
+- Is sensitive data encrypted in transit and at rest?
+- Are up-to-date hashing and encryption algorithms used?
+
+Exception Handling
+- Can the application fail gracefully?
+- Do all methods raise or handle appropriate exceptions?
+- Do error messages leak sensitive information?
+- Are resources (file handles, DB connections) released when errors occur?
+
+Injection Attacks & Input Validation
+- Are the length and data type of input validated?
+- Is input validated to fall within an expected range?
+- Does validation take place on the server side?
+
+Logging & Auditing
+- Is sensitive information (e.g., passwords) excluded from logs?
+- Do logs contain enough detail to reconstruct events for investigations?
+- Are logging levels set correctly for production?
